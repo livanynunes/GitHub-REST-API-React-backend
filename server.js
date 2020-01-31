@@ -8,8 +8,8 @@ let port = process.env.PORT || 8000;
 let fetch = require("node-fetch");
 
 //IP tokens to access Github application  // 60 access/hour
-const client_id = 'Iv1.Iv1.a1dd32dc29b315b0';
-const client_secret = 'f46d3af79fa14f5d839217d1adf3d2b82fbca2b3';
+const client_id = '3386a079b50cae44f25b';
+const client_secret = '25d68133d4c40da68b14bf7ed2b2d82202df49ae';
 
 const fetchUser = async (user) => {
     const api_call = await fetch(`https://api.github.com/users/${user}?client_id=${client_id}&client_secret=${client_secret}`);
