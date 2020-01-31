@@ -43,8 +43,8 @@
     "typescript": "3.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "start": "node server",
+    "build": "node server",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
