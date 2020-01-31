@@ -1,4 +1,5 @@
-{  "name": "node-react",
+{  
+  "name": "node-react",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm start",
@@ -9,6 +10,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "jest": "^25.1.0",
+    "cors": "^2.8.5",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
