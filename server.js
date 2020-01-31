@@ -4,7 +4,7 @@ let cors = require('cors')
 let app = express()
 // Let it be acessible for others
 app.use(cors())
-let port = 8000
+let port = process.env.PORT || 8000;
 let fetch = require("node-fetch");
 
 //IP tokens to access Github application  // 60 access/hour
@@ -30,7 +30,7 @@ const fetchSince = async (number) => {
     const data = await api_call.json();
 
     // return array 'data' and a string 'next' with link for the next page
-    return{data,next:`http://localhost:8000/api/users?since=${data[data.length-1].id}`};
+    return{data,next:`${process.env.APP_URL || 'http://localhost'}:${port}/api/users?since=${data[data.length-1].id}`};
 };
 
 app.get('/api/users', (req, res) => {
@@ -51,6 +51,6 @@ app.get('/api/users/:username/repos', (req,res)=>{
 });
 
 module.exports = app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`)
+  console.log(`Servidor rodando em ${process.env.APP_URL || 'http://localhost'}:${port}`)
   console.log('Para derrubar o servidor: ctrl + c');
 })
