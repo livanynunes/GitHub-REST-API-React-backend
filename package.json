@@ -36,7 +36,6 @@
     "eslint-plugin-react": "7.14.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
-    "jest": "^25.1.0",
     "prettier": "1.18.2",
     "supertest": "^4.0.2"
   },
